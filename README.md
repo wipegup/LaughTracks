@@ -38,7 +38,7 @@ bundle update
 ```
 User Story 1
 
-As a visitor,
+As a visitor
 When I visit `/comedians`
 Then I see a list of comedians with the following
 information for each comedian:
@@ -55,7 +55,7 @@ information for each comedian:
 ```
 User Story 2
 
-As a visitor,
+As a visitor
 When I visit `/comedians`
 Then I also see a list of each comedian's TV specials' names
 
@@ -66,19 +66,20 @@ Then I also see a list of each comedian's TV specials' names
 ```
 User Story 3
 
-As a visitor,
+As a visitor
 When I visit `/comedians`
 Where I see a list of each comedian's TV specials' names,
-I also see each special's run-time length in minutes, 
-and a thumbnail image.
+I also see each special's run-time length in minutes, and a thumbnail image.
 
 - Image locations (URLs) can be stored in the database as a string.
+- Use the image URLs from IMDB or other online source for the special
+- Use CSS styling to scale the image smaller if needed to fit on the page
 ```
 
 ```
 User Story 4
 
-As a visitor,
+As a visitor
 When I visit `/comedians`
 Then I see an area at the top of the page called 'Statistics'
 In that 'Statistics' area, I see the following information:
@@ -93,8 +94,8 @@ using Ruby
 ```
 User Story 5
 
-As a visitor,
-when I visit `/comedians?age=34`
+As a visitor
+When I visit `/comedians?age=34`
 Then I see the list of comedians on the page only shows
 comedians who match the age criteria.
 
@@ -105,7 +106,7 @@ comedians who match the age criteria.
 ```
 User Story 6
 
-As a visitor,
+As a visitor
 When I visit `/comedians`
 For each comedian, I see a count of their TV specials
 and the Statistics area on the page should list a total count
@@ -115,8 +116,8 @@ of TV specials for every comedian.
 ```
 User Story 7
 
-As a visitor,
-when I visit `/comedians?age=34`
+As a visitor
+When I visit `/comedians?age=34`
 Then I see a list of all comedians with an age of 34
 Just like a previous User Story, BUT all other statistics 
 information in the 'Statistics' area of the page should be limited 
@@ -125,6 +126,18 @@ the page.
 
 - Testing should ensure that calculated statistics are
   correct for a limited subset of data
+```
+
+```
+User Story 8
+
+As a visitor
+When I visit `/comedians/new`
+Then I see a form to input a new comedian into the database
+Including fields for their name, age and city.
+When the form is successfully submitted and saved,
+Then I am redirected to `/comedians`
+And I see the new comedian's data on the page.
 ```
 
 ## Extensions
