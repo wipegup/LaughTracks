@@ -4,6 +4,9 @@ This is your Week 1 Solo Project for Module 2 of the Backend program at Turing.
 
 This project will allow you to apply the lessons you've learned this first week in an ongoing project. We encourage you to take chances, be risky, try new things.
 
+At the end of this project, you will submit a blog post as a reflection of what you learned and implemented in your project.
+Details are in a section below.
+
 The primary goals for this project:
 
 - creation of a basic web application from scratch
@@ -173,54 +176,43 @@ Then I see all previous information, but all comedians are
 sorted alphabetically by the age of the comedian.
 ```
 
+## Blog Post Deliverable
+
+At the end of this project, write a reflection on what you learned and implemented.
+This will help you review your own code and gain practice explaining/talking through the code and the process/decisions that were made along the way. Include code snippets from the project in your explanations.
+
+We reccommend writing your blog on [Medium](https://medium.com), but if you have a blog site that you already use that is okay too. However, it must be publically accessible and the link should be submitted to your instructors via Direct Message. 
+
+Here are some questions to think about as you write your post: 
+
+- How did you approach this project? 
+  What sort of planning did you do?
+  
+- What was the most challenging part of the project?
+  How did you deal with that challenge? 
+  Were you able to overcome it? 
+  If yes, how did you overcome it?
+  If no, what do you think is the reason for not being able to and what would you do differenlty?
+  
+- What did you enjoy most about the project? 
+
+- What part of the project are you most proud of and why?
+
+- If you had to do this project again, what would you want to change? (This could be your process, organization of code, particular piece of code that you would want to write differently etc.)
+
+- What is one specific thing that you want to take from this project and implement in your next project? (This could be something that worked well for you or something that didn't go well, but you learned from it.)
+
+
+
 ## Rubric
 
 This project is not evaluated. HOWEVER, the following is an example rubric we might follow for this type of project:
 
-### 1. Feature Completeness
 
-* Exceeds Expectations: All features are correctly implemented along with one or more extensions
-* Meets Expectations: All features defined in the assignment are correctly implemented and project is deployed
-* Below Expectations: There are one or two features missing or incorrectly implemented and/or project is not fully deployed
-
-### 2. Views
-
-* Exceeds Expectations: Views show logical refactoring into layout(s), partials and helpers, with no logic present
-* Meets Expectations: Views make use of layout(s), partials and helpers
-* Below Expectations: Views don't make use of partials or show weak understanding of rendering templates
-
-### 3. Controllers
-
-* Exceeds Expectations: Controller code shows significant effort towards refactoring and pushing logic down the stack
-* Meets Expectations: Controller code is generally well organized with three or fewer methods that need refactoring
-* Below Expectations: There are many controller methods that should have been refactored
-
-### 4. Models
-
-* Exceeds Expectations: Models show excellent organization, refactoring, and appropriate use of Rails features
-* Meets Expectations: Models show an effort to push logic down the stack, but need more internal refactoring
-* Below Expectations: Models are somewhat messy and/or make poor use of Rails features
-
-### 5. ActiveRecord
-
-* Exceeds Expectations: Best choice ActiveRecord methods are used to solve each problem
-* Meets Expectations: ActiveRecord is utilized wherever it can be. There is no Ruby where there should be ActiveRecord
-* Below Expectations: Ruby is used to programatically solve problems where ActiveRecord could be used
-
-### 6. Testing
-
-* Exceeds Expectations: Project has a running test suite that exercises the application at multiple levels and utilizes excellent setup and teardown to maximum productivity and minimize code
-* Meets Expectations: Project has a running test suite that covers all functionality and tests at multiple levels
-* Below Expectations: Project has sporadic use of tests at multiple levels
-
-### 7. Usability
-
-* Exceeds Expectations: Project is highly usable and ready to deploy to customers
-* Meets Expectations: Project is highly usable, but needs more polish before it'd be customer-ready
-* Below Expectations: Project needs more attention to the User Experience, some views need to use a URL to visit them
-
-### 8. Styling and Layout
-
-* Exceeds Expectations: Project utilizes HTML and CSS to its fullest
-* Meets Expectations: Project utilizes HTML and CSS but has some area for improvement
-* Below Expectations: Project utilizes little or no HTML or CSS
+|   	| 1. Below Standard	| 2. Approaching Standard	| 3. Meets Standard	| 4. Above Standard	|
+|---	|---	|---	|---	|---	|
+| Featrure Completeness | - Fewer than 75% of stories are complete | - 75% of user stories are complete, but not all of them are fully implemented | - All user stories are complete | All user stories are completed and additional extension work was attempted|
+| MVC Responsibilities | - Models, Views, and Controllers do not have clear responsiblities   EX. Views are making calls to the model or database, Controllers are handiling calculations or making database calls | Views contain logic that makes significant calls to the database OR Controllers are handling calcualations OR Models process data ineffciently and is not passing responsiblity to database 	|  - Views only contain `.each` calls, branch logic, and formatted CSS - Controllers push almost all the work to the Models for reading/writing data to the database - Models handle calulcations and interactions with the database | - Views only display data and do not make addiontal calls to the databsae; they may include branch logic - Controllers request all data from Models excepts `.all`, `.find`, `.create`, `.delete` methods - Models read/write all other dta using branch lgoic of smaller methods |
+| ActiveRecord	| - No ActiveRecord used | - Using Ruby enumerables where ActiveRecord could be used mixed with some ActiveRecord | - Using ActiveRecord to handle calculations and interactions to the database correctly	| - Using most efficient ActiveRecord queries  	|
+| Testing	| - Below 75% coverage | - Testing coverage is between 75-98% - Models tests are incomplete - Hardcoding values for expectations - Poorly written | - 98% of better test coverage for feature tests - 100% for model tests - Using variable as opposed to hard coding values - Use of within blocks for targeted feature test - Robustly written tests 	| - Clear TDD - Test Filse extremely organized - Utilize `before(:each)` blocks for test setup - 100% coverage for features and models	|
+| Usability/Styling | - Little or no Styling - User workflow is problematic (must type urls) | - Styling is incomplete - Layout does not follow good HTML patterns - Incomplete Navigation | - Purposeful styling pattern (complementary color choices, intentional layout of HTML - Links/Buttons to reach all ares of the site 	|  -Extremley well styled and purposeful layout(production ready) - Excellent color scheme and font usage(not default fonts) - Easy to use and follow application flow (does not have to search for links or buttons on the page) - Utilizes addiontal tooling(ex. SCSS) 	|
