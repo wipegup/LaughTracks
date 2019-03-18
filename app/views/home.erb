@@ -1,0 +1,9 @@
+<h1>home</h1>
+<% @comedians.each do |comedian|%>
+  <%= comedian.name %>
+<% end %>
+<br>
+<br>
+<% @specials.each do |comedian|%>
+  <img src = <%= comedian.thumbnail %> />
+<% end %>

@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Standup Comedians</title>
+    <link rel='stylesheet' type = "text/css" href='/style.css'/>
+  </head>
+
+  <body>
+    <div class = "page">
+
+      <nav>
+        <% @comedians.each do |comedian| %>
+          <a href= <%="../"+comedian.id.to_s+"/"+comedian.name.gsub(" ", "").gsub("'","")%>>
+            <%=comedian.name%>
+          </a>
+          <br>
+          <%= comedian.age %>; <%= comedian.hometown %>
+          <br>
+          <br>
+        <% end %>
+      </nav>
+
+
+      <article style = "text-align: center; overflow: scroll;">
+        <%= yield %>
+      </article>
+
+
+
+      <div class="iframe-container">
+        <iframe src="/specials/default" name="specials">
+        </iframe>
+      </div>
+
+
+    </div>
+  </body>
+
+</html>

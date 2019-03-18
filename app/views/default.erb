@@ -1,0 +1,12 @@
+<% @comedians.each do |comedian| %>
+  <a href= <%="../"+comedian.id.to_s+"/"+comedian.name.gsub(" ", "").gsub("'","")%>>
+    <%=comedian.name%>
+  </a>
+  <br>
+  <% Special.where(comedian_id: comedian.id).each do |special| %>
+    <%= special.title %> | Runtime: <%= special.runtime %> | <img src= <%=special.thumbnail%> width = "20px", height = "30px"/>
+    <br>
+  <%end%>
+  <br>
+  <br>
+<% end %>

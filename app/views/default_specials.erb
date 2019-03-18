@@ -1,0 +1,7 @@
+<h1> Statistics </h1>
+
+ Average Age: <%= Comedian.average(:age) %>
+ <br>
+ Average Special Length: <%= Special.average(:runtime) %>
+ <br>
+ All Cities <%= Comedian.select(:hometown).distinct.map{|ht| ht.hometown} %>

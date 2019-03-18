@@ -1,0 +1,26 @@
+<head>
+  <title>Stand-up Comedians</title>
+  <link rel='stylesheet' type = "text/css" href='/style.css'/>
+</head>
+
+<body>
+  <div class = "page">
+    <nav>
+      <% @comedians.each do |comedian| %>
+        <a href= <%=comedian.id.to_s+"/"+comedian.name.gsub(" ", "").gsub("'","")%>> <%=comedian.name%></a>
+        <br>
+      <% end %>
+    </nav>
+
+    <article >
+      This is where you will see information about the comedian
+    </article>
+
+    <div class="iframe-container">
+      <iframe src="/specials/default" name="specials">
+      </iframe>
+    </div>
+
+
+</div>
+</body>

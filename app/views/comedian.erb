@@ -1,0 +1,40 @@
+<head>
+  <title><%=@comedian_info.name%></title>
+  <link rel='stylesheet' type = "text/css" href='/style.css'/>
+</head>
+
+<body>
+  <div class = "page">
+    <nav>
+      <% @comedians.each do |comedian| %>
+        <a id = "toc"
+        href=<%="../"+comedian.id.to_s+"/"+comedian.name.gsub(/[ ']/, "")%> >
+          <%=comedian.name%>
+        </a>
+        <br>
+      <% end %>
+    </nav>
+
+    <article style= "text-align: center">
+      <a id = "name"> <%= @comedian_info.name %></a><br>
+      <a id = "age"> <%= @comedian_info.age %></a><br>
+      <a id = "hometown"> <%= @comedian_info.hometown %></a><br>
+      <a id = "headshot">
+        <img src = <%=@comedian_info.headshot %> width = "150px", height = "225px"/>
+      </a>
+      <br>
+      <ul style = "text-align: left">
+      <% @specials.each do |special| %>
+        <a id = "special_title_link" href = <%= "../specials/" + @comedian_id.to_s+'#' + special.id.to_s%> target = "details" >
+          <li><%= special.title%></li>
+        </a>
+      <% end %>
+      </ul>
+    </article>
+
+    <div class="iframe-container">
+      <iframe src="../specials/default" name="details">
+      </iframe>
+    </div>
+  </div>
+</body>

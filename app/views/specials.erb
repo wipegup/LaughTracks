@@ -1,0 +1,16 @@
+<% @specials.each do |special| %>
+  <a id = <%=special.id.to_s%>>
+    <a id = "special_title"> <%= special.title%></a>
+  </a>
+
+  <br>
+  <a id = "special_thumbnail">
+    <img src= <%=special.thumbnail%> width = "100px", height = "150px"/>
+  </a>
+  <br>
+  <a id = "special_runtime">
+    <%= special.runtime %>
+  </a>
+  <br>
+  <br>
+<% end %>

@@ -1,0 +1,17 @@
+<a id = "name"> <%= @comedian_info.name %></a><br>
+<a id = "age"> <%= @comedian_info.age %></a><br>
+<a id = "hometown" href = <%="www.google.com" + @comedian_info.hometown%>>
+  <%= @comedian_info.hometown %></a><br>
+<a id = "headshot">
+  <img src = <%=@comedian_info.headshot %> width = "150px", height = "225px"/>
+</a>
+<br>
+<ul style = "text-align: left">
+<% @specials.each do |special| %>
+  <a id = "special_title_link"
+    href = <%= "../specials/" + @comedian_id.to_s+'#' + special.id.to_s%>
+    target = "specials" >
+    <li><%= special.title%></li>
+  </a>
+<% end %>
+</ul>
